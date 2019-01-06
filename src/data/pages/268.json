@@ -1,1 +1,17 @@
-{"title":"WBS","created":1542713695,"updated":1543049177,"lines":["WBS","Work Breakdown Structureの略","","=====","#用語",""]}
+{
+    "title": "WBS",
+    "created": 1542713695,
+    "updated": 1543049177,
+    "lines": [
+        "WBS",
+        "Work Breakdown Structureの略",
+        "",
+        "=====",
+        "#用語",
+        ""
+    ],
+    "tags": [
+        "用語"
+    ],
+    "links": []
+}

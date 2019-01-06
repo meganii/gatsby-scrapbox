@@ -1,1 +1,33 @@
-{"title":"ソフトウェア・テストの技法 第2版","created":1529190168,"updated":1538570453,"lines":["ソフトウェア・テストの技法 第2版","[https://images-na.ssl-images-amazon.com/images/I/41uUlnfT3QL._SX341_BO1,204,203,200_.jpg https://www.amazon.co.jp/dp/4764903296]","","","=====","著者"," J. マイヤーズ"," M. トーマス"," T. バジェット"," C. サンドラー"," Glenford J. Myers (原著)"," Todd M. Thomas (原著)"," Tom Badgett (原著)"," Corey Sandler (原著)"," [長尾真] (翻訳)"," [松尾正信]","#技術書 #テスト技法",""]}
+{
+    "title": "ソフトウェア・テストの技法 第2版",
+    "created": 1529190168,
+    "updated": 1538570453,
+    "lines": [
+        "ソフトウェア・テストの技法 第2版",
+        "[https://images-na.ssl-images-amazon.com/images/I/41uUlnfT3QL._SX341_BO1,204,203,200_.jpg https://www.amazon.co.jp/dp/4764903296]",
+        "",
+        "",
+        "=====",
+        "著者",
+        " J. マイヤーズ",
+        " M. トーマス",
+        " T. バジェット",
+        " C. サンドラー",
+        " Glenford J. Myers (原著)",
+        " Todd M. Thomas (原著)",
+        " Tom Badgett (原著)",
+        " Corey Sandler (原著)",
+        " [長尾真] (翻訳)",
+        " [松尾正信]",
+        "#技術書 #テスト技法",
+        ""
+    ],
+    "tags": [
+        "技術書",
+        "テスト技法"
+    ],
+    "links": [
+        "長尾真",
+        "松尾正信"
+    ]
+}

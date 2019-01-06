@@ -1,1 +1,40 @@
-{"title":"ajitofm 20: Refactoring Organizations","created":1546651766,"updated":1546651824,"lines":["ajitofm 20: Refactoring Organizations","[https://ajito.fm/20/ ajitofm 20: Refactoring Organizations]","","[エンジニアリング組織論への招待 不確実性に向き合う思考と組織のリファクタリング]の著者[広木大地]さんを招いての回","[https://images-fe.ssl-images-amazon.com/images/I/513kY6L-3yL.jpg https://www.amazon.co.jp/dp/B079TLW41L]","","Agenda"," エンジニアリング組織論への招待 ～不確実性に向き合う思考と組織のリファクタリング"," rector"," スケジュール"," 「わからない」こと"," 不確実性"," [https://rework.withgoogle.com/guides/managers-develop-and-support-managers/steps/review-googles-new-manager-training/ Tool: Review Google’s new manager training]"," デッドライン","","　全部の本の「はじめに」を集めた本"," 　これってなんのためにやっているのか"," 　なぜそうなっているのかを集めた"," デザインパターンを適用してはいけない部分"," 　バックグラウンドのストーリーを読み飛ばしてしまって"," 「本だけを読むとアカデミックの人なのかと思った」"," 　同じくそう思った[meganii.icon]","","#podcast #ajitofm"]}
+{
+    "title": "ajitofm 20: Refactoring Organizations",
+    "created": 1546651766,
+    "updated": 1546651824,
+    "lines": [
+        "ajitofm 20: Refactoring Organizations",
+        "[https://ajito.fm/20/ ajitofm 20: Refactoring Organizations]",
+        "",
+        "[エンジニアリング組織論への招待 不確実性に向き合う思考と組織のリファクタリング]の著者[広木大地]さんを招いての回",
+        "[https://images-fe.ssl-images-amazon.com/images/I/513kY6L-3yL.jpg https://www.amazon.co.jp/dp/B079TLW41L]",
+        "",
+        "Agenda",
+        " エンジニアリング組織論への招待 ～不確実性に向き合う思考と組織のリファクタリング",
+        " rector",
+        " スケジュール",
+        " 「わからない」こと",
+        " 不確実性",
+        " [https://rework.withgoogle.com/guides/managers-develop-and-support-managers/steps/review-googles-new-manager-training/ Tool: Review Google’s new manager training]",
+        " デッドライン",
+        "",
+        "　全部の本の「はじめに」を集めた本",
+        " 　これってなんのためにやっているのか",
+        " 　なぜそうなっているのかを集めた",
+        " デザインパターンを適用してはいけない部分",
+        " 　バックグラウンドのストーリーを読み飛ばしてしまって",
+        " 「本だけを読むとアカデミックの人なのかと思った」",
+        " 　同じくそう思った[meganii.icon]",
+        "",
+        "#podcast #ajitofm"
+    ],
+    "tags": [
+        "podcast",
+        "ajitofm"
+    ],
+    "links": [
+        "エンジニアリング組織論への招待 不確実性に向き合う思考と組織のリファクタリング",
+        "広木大地",
+        "meganii.icon"
+    ]
+}

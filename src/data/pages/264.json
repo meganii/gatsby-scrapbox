@@ -1,1 +1,42 @@
-{"title":"HTTPの教科書","created":1542631691,"updated":1542631880,"lines":["HTTPの教科書","[https://images-fe.ssl-images-amazon.com/images/I/516mGHRy-iL.jpg https://www.amazon.co.jp/dp/B00EESW7K0]","","認証 Authentification"," Basic認証"," DIGEST認証"," SSLクライアント認証"," フォームベース認証","","認証とは","　登録した本人しか知らない情報"," 登録した本人しか持っていない情報","で、本人であるかどうかを確かめる","","e.g.","　パスワード"," ワンタイムパスワード"," 電子証明書"," バイオメトリクス"," ICカード","","=====","著者: [上野宣]","出版社: [翔泳社]; 1版 (2013/5/24)","ASIN: B00EESW7K0","#技術書 [HTTP]",""]}
+{
+    "title": "HTTPの教科書",
+    "created": 1542631691,
+    "updated": 1542631880,
+    "lines": [
+        "HTTPの教科書",
+        "[https://images-fe.ssl-images-amazon.com/images/I/516mGHRy-iL.jpg https://www.amazon.co.jp/dp/B00EESW7K0]",
+        "",
+        "認証 Authentification",
+        " Basic認証",
+        " DIGEST認証",
+        " SSLクライアント認証",
+        " フォームベース認証",
+        "",
+        "認証とは",
+        "　登録した本人しか知らない情報",
+        " 登録した本人しか持っていない情報",
+        "で、本人であるかどうかを確かめる",
+        "",
+        "e.g.",
+        "　パスワード",
+        " ワンタイムパスワード",
+        " 電子証明書",
+        " バイオメトリクス",
+        " ICカード",
+        "",
+        "=====",
+        "著者: [上野宣]",
+        "出版社: [翔泳社]; 1版 (2013/5/24)",
+        "ASIN: B00EESW7K0",
+        "#技術書 [HTTP]",
+        ""
+    ],
+    "tags": [
+        "技術書"
+    ],
+    "links": [
+        "上野宣",
+        "翔泳社",
+        "HTTP"
+    ]
+}

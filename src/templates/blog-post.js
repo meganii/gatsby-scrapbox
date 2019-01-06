@@ -4,11 +4,15 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
   const page = data.pagesJson
-  const content = page.lines.map(line => {
+  const content = page.lines.map((line, index) => {
     return (
-      <p>{line}</p>
+      <div key ={index}
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: replaceTags(line)}}  
+      />
     )
   })
+
   return (
     <Layout>
       <div>
@@ -17,6 +21,13 @@ export default ({ data }) => {
       </div>
     </Layout>
   )
+}
+
+const replaceTags = (line) => {
+  let html = line.replace(/#([^\s$]*)/g, '<a href="/$1">$1</a>')
+  html = html.replace(/\[(https:\/\/.+?\.(jpg|jpeg|png)|https:\/\/gyazo\.com.+?)\s*(https:\/\/.+?)?\]/, '<img src="$1" />')
+  html = html.replace(/\[(.+?)\]/g, '<a href="/$1">$1</a>')
+  return html
 }
 
 export const query = graphql`

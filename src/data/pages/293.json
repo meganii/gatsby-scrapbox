@@ -1,1 +1,26 @@
-{"title":"ASP.NET MVC 5 実践プログラミング","created":1546311076,"updated":1546311314,"lines":["ASP.NET MVC 5 実践プログラミング","[https://images-fe.ssl-images-amazon.com/images/I/51GbumXGR-L.jpg https://www.amazon.co.jp/dp/B00XBF8E9K]","","=====","著者"," [山田祥寛]","出版社: [秀和システム] (2014/10/1)","ASIN: B00XBF8E9K","#技術書 [ASP.NET] [ASP.NET MVC]",""]}
+{
+    "title": "ASP.NET MVC 5 実践プログラミング",
+    "created": 1546311076,
+    "updated": 1546311314,
+    "lines": [
+        "ASP.NET MVC 5 実践プログラミング",
+        "[https://images-fe.ssl-images-amazon.com/images/I/51GbumXGR-L.jpg https://www.amazon.co.jp/dp/B00XBF8E9K]",
+        "",
+        "=====",
+        "著者",
+        " [山田祥寛]",
+        "出版社: [秀和システム] (2014/10/1)",
+        "ASIN: B00XBF8E9K",
+        "#技術書 [ASP.NET] [ASP.NET MVC]",
+        ""
+    ],
+    "tags": [
+        "技術書"
+    ],
+    "links": [
+        "山田祥寛",
+        "秀和システム",
+        "ASP.NET",
+        "ASP.NET MVC"
+    ]
+}

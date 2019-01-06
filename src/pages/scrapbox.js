@@ -3,9 +3,6 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  data.allPagesJson.edges.map(node => {
-    console.log(node.node)
-  })
   const titles = data.allPagesJson.edges.map((edge) => {
     return (
       <div key={edge.node.id}>

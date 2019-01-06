@@ -14,6 +14,8 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const tagslinksTemplate = path.resolve(`src/templates/tagslinks.js`)
+
 
   return graphql(`
     {
@@ -25,6 +27,8 @@ exports.createPages = ({ actions, graphql }) => {
             created
             updated
             lines
+            tags
+            links
           }
         }
       }
@@ -33,6 +37,34 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+
+    let tags = new Set();
+    result.data.allPagesJson.edges.map(({node}) => {
+      node.tags.map(tag => tags.add(tag))
+    })
+    Array.from(tags).forEach(tag => {
+      createPage({
+        path: tag,
+        component: tagslinksTemplate,
+        context: {
+          id: tag
+        }
+      })
+    })
+
+    let links = new Set();
+    result.data.allPagesJson.edges.map(({node}) => {
+      node.links.map(link => links.add(link))
+    })
+    Array.from(links).forEach(link => {
+      createPage({
+        path: link,
+        component: tagslinksTemplate,
+        context: {
+          id: link
+        }
+      })
+    })
 
     result.data.allPagesJson.edges.forEach(({ node }) => {
       createPage({
