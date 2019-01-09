@@ -13,22 +13,16 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
-  const tagslinksTemplate = path.resolve(`src/templates/tagslinks.js`)
-
+  const scrapboxPageTemplate = path.resolve(`src/templates/scrapbox-page.js`)
 
   return graphql(`
     {
-      allPagesJson {
+      allScrapboxPage {
         edges {
           node {
             id
             title
-            created
-            updated
-            lines
-            tags
-            links
+            descriptions
           }
         }
       }
@@ -38,38 +32,10 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    let tags = new Set();
-    result.data.allPagesJson.edges.map(({node}) => {
-      node.tags.map(tag => tags.add(tag))
-    })
-    Array.from(tags).forEach(tag => {
-      createPage({
-        path: tag,
-        component: tagslinksTemplate,
-        context: {
-          id: tag
-        }
-      })
-    })
-
-    let links = new Set();
-    result.data.allPagesJson.edges.map(({node}) => {
-      node.links.map(link => links.add(link))
-    })
-    Array.from(links).forEach(link => {
-      createPage({
-        path: link,
-        component: tagslinksTemplate,
-        context: {
-          id: link
-        }
-      })
-    })
-
-    result.data.allPagesJson.edges.forEach(({ node }) => {
+    result.data.allScrapboxPage.edges.forEach(({ node }) => {
       createPage({
         path: node.title,
-        component: blogPostTemplate,
+        component: scrapboxPageTemplate,
         context: {
           id: node.id
         }, // additional data can be passed via context
