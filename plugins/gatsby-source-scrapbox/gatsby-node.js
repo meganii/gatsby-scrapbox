@@ -33,11 +33,18 @@ exports.sourceNodes = async (
 
   // Gatsby expects sourceNodes to return a promise
   try {
-    const response = await axios.get(apiUrl, {headers: {
-      Cookie: `connect.sid=${configOptions.sid};`
-    }})
-    // console.log(response.data);
-    response.data.pages.forEach(page => {
+    const client = axios.create({
+      baseURL: 'https://scrapbox.io/api/',
+      headers: {
+        Cookie: `connect.sid=${configOptions.sid};`
+      }
+    })
+    const {data} = await client.request({
+      method: 'get',
+      url: `/pages/${configOptions.project_name}`,
+    })
+
+    data.pages.forEach(page => {
       const nodeData = processPage(page)
       return createNode(nodeData)
     })
