@@ -9,6 +9,7 @@ export default ({ pageContext: { id }, data}) => {
       <div>
         <h1>{data.scrapboxPage.title}</h1>
         <p>{data.scrapboxPage.descriptions}</p>
+        <div dangerouslySetInnerHTML={{ __html: data.scrapboxPage.text}} />
       </div>
     </Layout>
   )
@@ -20,6 +21,7 @@ export const query = graphql`
       id
       title
       descriptions
+      text
     }
   }
 `
