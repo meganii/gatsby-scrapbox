@@ -21,7 +21,7 @@ module.exports = {
       resolve: "gatsby-source-scrapbox",
       options: {
         sid: SCRAPBOX_SID,
-        project_name: "meganii-private",
+        project_name: "mediamarker-icossa",
       },
     },
     `gatsby-transformer-sharp`,

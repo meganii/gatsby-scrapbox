@@ -21,9 +21,9 @@ exports.sourceNodes = async (
   const results = await Promise.map(data.pages, async (page) => {
     const {data} = await client.request({
       method: 'get',
-      url: `/pages/${options.project_name}/${encodeURIComponent(page.title)}/text`,
+      url: `/pages/${options.project_name}/${encodeURIComponent(page.title)}/`,
     })
-    return {...page, text: data}
+    return data
   }, { concurrency: 5 })
 
   results.forEach(page => {

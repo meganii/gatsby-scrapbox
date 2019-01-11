@@ -20,8 +20,6 @@ export const query = graphql`
     scrapboxPage(id: {eq: $id}){
       id
       title
-      descriptions
-      text
     }
   }
 `
