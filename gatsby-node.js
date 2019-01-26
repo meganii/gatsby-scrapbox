@@ -32,13 +32,30 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allScrapboxPage.edges.forEach(({ node }) => {
+    const pages = result.data.allScrapboxPage.edges
+    pages.forEach(({ node }) => {
       createPage({
         path: node.title,
         component: scrapboxPageTemplate,
         context: {
           id: node.id
         }, // additional data can be passed via context
+      })
+    })
+
+    // Create list pages
+    const postsPerPage = 10
+    const numPages = Math.ceil(pages.length / postsPerPage)
+    Array.from({ length: numPages }).forEach( (_, i) => {
+      createPage({
+        path: i === 0 ? `page` : `page/${ i + 1 }`,
+        component: path.resolve("./src/templates/scrapbox-page-list.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          previousPage: i === 1 ? `` : `page/${ i }`,
+          nextPage: i === pages.length ? `` : `page/${ i + 2 }`,
+        },
       })
     })
   })

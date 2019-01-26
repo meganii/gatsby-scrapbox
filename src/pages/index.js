@@ -6,7 +6,6 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 
 const IndexPage = ({data}) => {
@@ -27,12 +26,6 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
       <Grid
         container
         direction="row"
@@ -41,6 +34,7 @@ const IndexPage = ({data}) => {
       >
         {titles}
       </Grid>
+      <Link to={`page/2`}>Next</Link>
     </Layout>
 )}
 
@@ -48,7 +42,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allScrapboxPage {
+    allScrapboxPage(limit: 10) {
       edges {
         node {
           id
