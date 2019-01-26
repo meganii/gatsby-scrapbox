@@ -1,5 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
@@ -10,10 +14,13 @@ const IndexPage = ({data}) => {
   
   const titles = data.allScrapboxPage.edges.map(edge => {
     return (
-      <div>
-        <h1>{edge.node.title}</h1>
-        <img src={edge.node.image} />
-      </div>
+      <Card>
+        <CardContent>
+          <Link to={edge.node.title}><h1>{edge.node.title}</h1></Link>
+          <img src={edge.node.image} />
+          <p>{edge.node.descriptions}</p>
+        </CardContent>
+      </Card>
     )
   })
     
@@ -26,7 +33,14 @@ const IndexPage = ({data}) => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
-      {titles}
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        {titles}
+      </Grid>
     </Layout>
 )}
 
