@@ -25,7 +25,8 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "slash": "^2.0.0",
-    "slug": "^0.9.3"
+    "slug": "^0.9.3",
+    "terser": "^3.16.0"
   },
   "keywords": [
     "gatsby"
