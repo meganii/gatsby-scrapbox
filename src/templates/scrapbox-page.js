@@ -6,7 +6,6 @@ export default ({ pageContext: { id }, data}) => {
 
   const sbLine = (line) => {
     const m = line.text.match(/^[\s|\t| ].*/) || []
-    console.log(m)
     if (m.length > 0) {
       const spaces = m[0].match(/[\s|\t]*/).length
       return `<div class="line"><span style="display: list-item;margin-left: ${ spaces * 1}rem;">${replaceTags(line.text)}</span></div>`

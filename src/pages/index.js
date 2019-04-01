@@ -9,8 +9,6 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const IndexPage = ({data}) => {
-  console.log(data)
-  
   const titles = data.allScrapboxPage.edges.map(edge => {
     return (
       <Card>
