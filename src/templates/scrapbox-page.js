@@ -15,10 +15,12 @@ export default ({ pageContext: { id }, data}) => {
   }
 
   const content = (lines) => {
+    const regexp = /=====/
     let content = ''
-    lines.forEach(line => {
+    for (let line of lines) {
+      if (regexp.test(line.text)) { break }
       content = content + sbLine(line)
-    })
+    }
     return content
   }
 
