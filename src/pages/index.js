@@ -40,7 +40,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allScrapboxPage(limit: 10) {
+    allScrapboxPage(limit: 12) {
       edges {
         node {
           id
