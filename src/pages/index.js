@@ -8,16 +8,33 @@ import CardContent from '@material-ui/core/CardContent'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import { css } from '@emotion/core'
+
 const IndexPage = ({data}) => {
   const titles = data.allScrapboxPage.edges.map(edge => {
     return (
-      <Card>
-        <CardContent>
-          <Link to={edge.node.title}><h1>{edge.node.title}</h1></Link>
-          <img src={edge.node.image} />
-          <p>{edge.node.descriptions}</p>
-        </CardContent>
-      </Card>
+      <Grid item md={3} sm={12} alignItems="stretch">
+        <Card>
+          <CardContent css={css`
+            height: 400px;
+            position: relative
+          `}          >
+              <div key={edge.node.id} >
+                <Link className="stretched-link" to={edge.node.title} css={css`text-decoration: none;`}>
+                <div css={css`
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden;
+                  `}>{edge.node.title}</div>
+                </Link>
+                <img src={edge.node.image} />
+                <p>{edge.node.descriptions}</p>
+              </div>
+            
+          </CardContent>
+        </Card>
+      </Grid>
     )
   })
     
@@ -27,8 +44,7 @@ const IndexPage = ({data}) => {
       <Grid
         container
         direction="row"
-        justify="center"
-        alignItems="center"
+        spacing={16}
       >
         {titles}
       </Grid>
