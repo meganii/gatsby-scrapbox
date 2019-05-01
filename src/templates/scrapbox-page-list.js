@@ -9,20 +9,6 @@ import Button from '@material-ui/core/Button'
 
 import { css } from '@emotion/core'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#53B371",
-      contrastText: '#fff',
-    },
-  },
-  typography: {
-    useNextVariants: true,
-  },
-})
-
 export default ({ pageContext: { previousPage, nextPage }, data}) => {
   const pages = data.allScrapboxPage.edges
   const cards = pages.map(({node}) => {
@@ -53,24 +39,22 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
     )
   })
   return (
-    <MuiThemeProvider theme={theme}>
-      <Layout>
-        <Grid
-          container
-          direction="row"
-          spacing={16}
-          justifyContent="center"
-        >
-          {cards}
+    <Layout>
+      <Grid
+        container
+        direction="row"
+        spacing={16}
+        justifyContent="center"
+      >
+        {cards}
+      </Grid>
+      <Grid container direction="row" justify="center" spacing={12}>
+        <Grid item css={css`padding: 20px;`}>
+          { previousPage ? <Link to={previousPage} css={css`margin-right: 10px;`}><Button variant="contained" color="primary">Prev.</Button></Link> : ''}
+          { nextPage ? <Link to={nextPage}><Button variant="contained" color="primary">Next</Button></Link> : ''}
         </Grid>
-        <Grid container direction="row" justify="center" spacing={12}>
-          <Grid item css={css`padding: 20px;`}>
-            { previousPage ? <Link to={previousPage} css={css`margin-right: 10px;`}><Button variant="contained" color="primary">Prev.</Button></Link> : ''}
-            { nextPage ? <Link to={nextPage}><Button variant="contained" color="primary">Next</Button></Link> : ''}
-          </Grid>
-        </Grid>
-      </Layout>
-    </MuiThemeProvider>
+      </Grid>
+    </Layout>
   )
 }
 

@@ -12,6 +12,19 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#53B371",
+      contrastText: '#fff',
+    },
+  },
+  typography: {
+    useNextVariants: true,
+  },
+})
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -25,6 +38,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <MuiThemeProvider theme={theme}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -41,6 +55,7 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
+        </MuiThemeProvider>
       </>
     )}
   />

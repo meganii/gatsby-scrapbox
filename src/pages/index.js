@@ -9,21 +9,7 @@ import Button from '@material-ui/core/Button'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-
 import { css } from '@emotion/core'
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#53B371",
-      contrastText: '#fff',
-    },
-  },
-  typography: {
-    useNextVariants: true,
-  },
-})
 
 const IndexPage = ({data}) => {
   const titles = data.allScrapboxPage.edges.map(edge => {
@@ -54,23 +40,21 @@ const IndexPage = ({data}) => {
   })
     
   return (
-    <MuiThemeProvider theme={theme}>
-      <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Grid
-          container
-          direction="row"
-          spacing={16}
-        >
-          {titles}
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Grid
+        container
+        direction="row"
+        spacing={16}
+      >
+        {titles}
+      </Grid>
+      <Grid container direction="row" justify="center">
+        <Grid item css={css`padding: 20px;`}>
+            <Link to={`page/2`}><Button variant="contained" color="primary">Next</Button></Link>
         </Grid>
-        <Grid container direction="row" justify="center">
-          <Grid item css={css`padding: 20px;`}>
-              <Link to={`page/2`}><Button variant="contained" color="primary">Next</Button></Link>
-          </Grid>
-        </Grid>
-      </Layout>
-    </MuiThemeProvider>
+      </Grid>
+    </Layout>
 )}
 
 export default IndexPage
