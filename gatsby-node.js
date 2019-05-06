@@ -14,7 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allScrapboxPage(sort: {fields: [pin, updated], order: [DESC, DESC] }) {
+      allScrapboxPage(sort: {fields: [pin, updated], order: [DESC, DESC]}, filter: {links: {nin: "Undisclosed"}}) {
         edges {
           node {
             id

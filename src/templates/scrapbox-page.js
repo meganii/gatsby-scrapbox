@@ -1,6 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import Chip from '@material-ui/core/Chip'
+import { css } from '@emotion/core'
 
 export default ({ pageContext: { id }, data}) => {
 
@@ -32,12 +34,18 @@ export default ({ pageContext: { id }, data}) => {
     return html
   }
 
+  const links = data.scrapboxPage.links.map(link => {
+    return (<Link to={link}><Chip label={link} /></Link>)
+  })
+
   return (
     <Layout>
       <div>
         <h1>{data.scrapboxPage.title || 'title'}</h1>
         <div>{data.scrapboxPage.descriptions}</div>
         <div dangerouslySetInnerHTML={{ __html: content(data.scrapboxPage.lines)}} />
+        <hr />
+        <div css={css`padding: 1em 0 2em 0;`}>{links}</div>
       </div>
     </Layout>
   )
@@ -48,6 +56,7 @@ export const query = graphql`
     scrapboxPage(id: {eq: $id}){
       id
       title
+      links
       lines {
         text
       }

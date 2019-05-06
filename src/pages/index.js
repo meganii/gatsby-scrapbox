@@ -61,7 +61,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allScrapboxPage(limit: 12) {
+    allScrapboxPage(limit: 12, sort: {fields: [pin, updated], order: [DESC, DESC]}, filter: {links: {nin: "Undisclosed"}}) {
       edges {
         node {
           id

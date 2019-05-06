@@ -13,6 +13,7 @@ import Header from "./header"
 import "./layout.css"
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -22,6 +23,11 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
+  },
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
   },
 })
 

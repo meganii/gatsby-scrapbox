@@ -60,7 +60,7 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!){
-    allScrapboxPage(limit: $limit, skip: $skip) {
+    allScrapboxPage(limit: $limit, skip: $skip, sort: {fields: [pin, updated], order: [DESC, DESC]}, filter: {links: {nin: "Undisclosed"}}) {
       totalCount
       edges {
         node {
