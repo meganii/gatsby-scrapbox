@@ -3,40 +3,13 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 
 import { css } from '@emotion/core'
+import GridItemSbCard from "../components/gridItemSbCard";
 
-export default ({ pageContext: { previousPage, nextPage }, data}) => {
+export default ({ pageContext: { previousPage, nextPage }, data }) => {
   const pages = data.allScrapboxPage.edges
-  const cards = pages.map(({node}) => {
-    return (
-      <Grid item md={3} sm={12} alignItems="stretch">
-        <Card>
-          <CardContent css={css`
-            height: 13.5rem;
-            position: relative;
-          `}>
-            <Link className="stretched-link" to={`/${node.title}`}>
-              <div key={node.id}>
-                <div css={css`
-                  display: -webkit-box;
-                  -webkit-box-orient: vertical;
-                  -webkit-line-clamp: 3;
-                  overflow: hidden;
-                `}>
-                  {node.title}
-                </div>
-              </div>
-              </Link>
-              <img src={node.image} />
-          </CardContent>
-        </Card>
-      </Grid>
-    )
-  })
   return (
     <Layout>
       <Grid
@@ -45,12 +18,12 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
         spacing={16}
         justifyContent="center"
       >
-        {cards}
+        <GridItemSbCard pages={pages} />
       </Grid>
       <Grid container direction="row" justify="center" spacing={16}>
         <Grid item css={css`padding: 20px;`}>
-          { previousPage ? <Link to={previousPage} css={css`margin-right: 10px;`}><Button variant="contained" color="primary">Prev.</Button></Link> : ''}
-          { nextPage ? <Link to={nextPage}><Button variant="contained" color="primary">Next</Button></Link> : ''}
+          {previousPage ? <Link to={`/${previousPage}`} css={css`margin-right: 10px;`}><Button variant="contained" color="primary">Prev.</Button></Link> : ''}
+          {nextPage ? <Link to={`/${nextPage}`}><Button variant="contained" color="primary">Next</Button></Link> : ''}
         </Grid>
       </Grid>
     </Layout>
