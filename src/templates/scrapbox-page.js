@@ -36,14 +36,19 @@ export default ({ pageContext: { id }, data }) => {
     return html
   }
 
-  const links = data.scrapboxPage.links.map(link => {
-    return (<Link to={link}><Chip label={link} /></Link>)
+  const links = data.scrapboxPage.links.map((link, index) => {
+    return (<Link key={`chip-${index}`} to={`/${link}`}><Chip label={link} /></Link>)
   })
 
-  const links1hopPages = data.scrapboxPage.relatedPages.links1hop || []
+  const links1hop = data.scrapboxPage.relatedPages.links1hop || []
+  const links1hopPages = links1hop.filter((l) => {
+    let localLinks = l.linksLc || []
+    return !localLinks.includes('undisclosed')
+  })
+
   const links2hop = data.scrapboxPage.relatedPages.links2hop || []
   const links2hopPages = links2hop.filter((l) => {
-    const localLinks = l.linksLc || []
+    let localLinks = l.linksLc || []
     return !localLinks.includes('undisclosed')
   }).slice(0, 8)
 
@@ -81,12 +86,14 @@ export const query = graphql`
           title
           image
           descriptions
+          linksLc
         }
         links2hop {
           id
           title
           image
           descriptions
+          linksLc
         }
       }
     }

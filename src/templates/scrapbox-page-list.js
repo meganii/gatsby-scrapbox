@@ -19,7 +19,7 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
             height: 400px;
             position: relative
           `}>
-            <Link className="stretched-link" to={node.title}>
+            <Link className="stretched-link" to={`/${node.title}`}>
               <div key={node.id}>
                 <div css={css`
                   display: -webkit-box;
@@ -47,7 +47,7 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
       >
         {cards}
       </Grid>
-      <Grid container direction="row" justify="center" spacing={12}>
+      <Grid container direction="row" justify="center" spacing={16}>
         <Grid item css={css`padding: 20px;`}>
           { previousPage ? <Link to={previousPage} css={css`margin-right: 10px;`}><Button variant="contained" color="primary">Prev.</Button></Link> : ''}
           { nextPage ? <Link to={nextPage}><Button variant="contained" color="primary">Next</Button></Link> : ''}
