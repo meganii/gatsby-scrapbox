@@ -16,8 +16,8 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
       <Grid item md={3} sm={12} alignItems="stretch">
         <Card>
           <CardContent css={css`
-            height: 400px;
-            position: relative
+            height: 13.5rem;
+            position: relative;
           `}>
             <Link className="stretched-link" to={`/${node.title}`}>
               <div key={node.id}>

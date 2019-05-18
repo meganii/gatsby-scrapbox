@@ -9,10 +9,10 @@ const GridRelatedLink = ({ links }) => {
   const nodes = links || []
   return nodes.map(node => {
     return (
-      <Grid key={`grid-${node.id}`} item md={3} sm={12} alignItems="stretch">
+      <Grid key={`grid-${node.id}`} item md="3" xs="6" alignItems="stretch">
         <Card>
           <CardContent css={css`
-            height: 400px;
+            height: 13.5rem;
             position: relative
           `}>
             <Link className="" to={`/${node.title}`}>

@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => {
       <Grid key={`grid-${edge.node.id}`} item md={3} sm={12} alignItems="stretch">
         <Card>
           <CardContent css={css`
-            height: 400px;
-            position: relative
+            height: 13.5rem;
+            position: relative;
           `}>
             <div key={edge.node.id} >
               <Link className="stretched-link" to={`/${edge.node.title}`} css={css`text-decoration: none;`}>
