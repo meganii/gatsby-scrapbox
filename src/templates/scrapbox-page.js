@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Chip from '@material-ui/core/Chip'
 import { css } from '@emotion/core'
 import Grid from '@material-ui/core/Grid';
-import GridRelatedLink from "../components/gridRelatedLink"
+import GridItemRelatedLink from "../components/gridItemRelatedLink"
 
 export default ({ pageContext: { id }, data }) => {
 
@@ -61,10 +61,10 @@ export default ({ pageContext: { id }, data }) => {
         <hr />
         <div css={css`padding: 1em 0 2em 0;`}>{links}</div>
         <Grid container direction="row" spacing={16}>
-          <GridRelatedLink links={links1hopPages} />
+          <GridItemRelatedLink links={links1hopPages} />
         </Grid>
         <Grid container direction="row" spacing={16}>
-          <GridRelatedLink links={links2hopPages} />
+          <GridItemRelatedLink links={links2hopPages} />
         </Grid>
       </div>
     </Layout>

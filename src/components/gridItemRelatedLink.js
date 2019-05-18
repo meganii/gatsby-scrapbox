@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { css } from '@emotion/core'
 
-const GridRelatedLink = ({ links }) => {
+const GridItemRelatedLink = ({ links }) => {
   const nodes = links || []
   return nodes.map(node => {
     return (
@@ -35,4 +35,4 @@ const GridRelatedLink = ({ links }) => {
   })
 }
 
-export default GridRelatedLink
+export default GridItemRelatedLink
