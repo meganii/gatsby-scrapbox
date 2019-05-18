@@ -30,7 +30,6 @@ const IndexPage = ({data}) => {
                   `}>{edge.node.title}</div>
                 </Link>
                 <img src={edge.node.image} />
-                <p>{edge.node.descriptions}</p>
               </div>
             
           </CardContent>

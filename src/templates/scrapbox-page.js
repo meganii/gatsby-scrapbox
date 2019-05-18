@@ -64,7 +64,6 @@ export default ({ pageContext: { id }, data }) => {
               </div>
             </Link>
             <img src={node.image} />
-            <p>{node.descriptions}</p>
           </CardContent>
         </Card>
       </Grid>
@@ -93,7 +92,6 @@ export default ({ pageContext: { id }, data }) => {
               </div>
             </Link>
             <img src={node.image} />
-            <p>{node.descriptions}</p>
           </CardContent>
         </Card>
       </Grid>

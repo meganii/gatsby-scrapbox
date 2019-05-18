@@ -32,7 +32,6 @@ export default ({ pageContext: { previousPage, nextPage }, data}) => {
               </div>
               </Link>
               <img src={node.image} />
-              <p>{node.descriptions}</p>
           </CardContent>
         </Card>
       </Grid>
