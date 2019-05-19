@@ -16,7 +16,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Grid container direction="row" spacing={16}>
-        {titles}
         <GridItemSbCard pages={data.allScrapboxPage.edges} />
       </Grid>
       <Grid container direction="row" justify="center">
