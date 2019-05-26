@@ -14,7 +14,7 @@ import { css } from '@emotion/core'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      {/* <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} /> */}
       <Grid container direction="row" spacing={16}>
         <GridItemSbCard pages={data.allScrapboxPage.edges} />
       </Grid>
