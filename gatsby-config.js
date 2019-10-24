@@ -1,11 +1,8 @@
-const path = require(`path`)
-const SCRAPBOX_SID = process.env.SCRAPBOX_SID
-
 module.exports = {
   siteMetadata: {
-    title: `Scrapmedia`,
+    title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@meganii`,
+    author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,14 +11,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-source-scrapbox",
-      options: {
-        sid: SCRAPBOX_SID,
-        project_name: "mediamarker-icossa",
       },
     },
     `gatsby-transformer-sharp`,
@@ -39,14 +28,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-source-scrapbox`,
       options: {
-        trackingId: 'UA-38171597-3',
+        sid: process.env.SCRAPBOX_SID,
+        project_name: "mediamarker-icossa",
       },
     },
-    `gatsby-plugin-catch-links`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

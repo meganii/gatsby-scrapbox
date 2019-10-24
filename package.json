@@ -8,24 +8,22 @@
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
     "@material-ui/core": "^3.9.0",
-    "gatsby": "^2.3.32",
+    "gatsby": "^2.3.33",
     "gatsby-image": "^2.0.40",
-    "gatsby-plugin-catch-links": "^2.0.10",
-    "gatsby-plugin-google-analytics": "^2.0.18",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.32",
     "gatsby-source-scrapbox": "git+https://github.com/meganii/gatsby-source-scrapbox.git",
-    "gatsby-transformer-json": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "prismjs": "^1.16.0",
-    "marked": "^0.6.2",
-    "prop-types": "^15.6.2",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
   },
   "keywords": [
     "gatsby"
@@ -34,13 +32,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-  },
-  "devDependencies": {
-    "jest": "^24.7.1",
-    "prettier": "^1.15.2"
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
